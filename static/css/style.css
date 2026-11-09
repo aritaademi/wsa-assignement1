@@ -1,0 +1,287 @@
+
+/* General page styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #222;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: white;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #222;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-button {
+    border: none;
+    background: #222;
+    color: white;
+    padding: 10px 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hero section */
+.hero {
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    background: #e8e3dc;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.primary-button {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Sections */
+.section {
+    padding: 50px 8%;
+}
+
+.section h2 {
+    margin-bottom: 25px;
+}
+
+/* Categories */
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.category-item {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+/* Search */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 12px 20px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Product cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #eee;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 15px 0 8px;
+}
+
+.product-card p {
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Login modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background: white;
+    padding: 35px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content input {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-content .primary-button {
+    width: 100%;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Utility */
+.hidden {
+    display: none !important;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #222;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+
+
+/* Product size and color selectors */
+.product-card select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+}
+
+/* Disabled buttons */
+.product-card button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+/* Cart items */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+.cart-item button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+/* Cart total */
+#cartTotal {
+    font-weight: bold;
+}
+
+/* Login message */
+#loginMessage,
+#orderMessage {
+    margin-top: 15px;
+}

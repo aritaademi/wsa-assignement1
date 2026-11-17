@@ -7,25 +7,12 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 
-# Create the Flask application.
 app = Flask(__name__)
 
 # Secret key used to sign JWT tokens.
 # In a real application, this should be stored in an environment variable.
 app.config['SECRET_KEY'] = 'web_store_secret_key_2026'
 
-# MySQL database connection.
-#
-# Format:
-# mysql+pymysql://USERNAME:PASSWORD@HOST/DATABASE_NAME
-#
-# XAMPP commonly uses:
-# username = root
-# password = empty
-# host = localhost
-#
-# If your MySQL root account has a password, add it after root:
-# mysql+pymysql://root:YOUR_PASSWORD@localhost/web_store_db
 
 app.config['SQLALCHEMY_DATABASE_URI'] = (
     'mysql+pymysql://root:@localhost/web_store_db'
@@ -36,7 +23,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize SQLAlchemy and connect it to Flask.
 db = SQLAlchemy(app)
-
 
 # ============================================================
 # RATE LIMITING CONFIGURATION
